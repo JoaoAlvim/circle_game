@@ -126,8 +126,8 @@ function Arma:update(dt)
         if hx > l.x - 20 and hx < l.x + 20 and hy > l.y - 20 and hy < l.y + 20 then
             score = score + 1
 
-            --sound = love.audio.newSource("BOING_.WAV")
-            --love.audio.play(sound)
+            sound = love.audio.newSource("som.WAV")
+            love.audio.play(sound)
 
             --dist = math.sqrt(math.pow((o.y-hy),2)+ math.pow((o.x-hx),2))
 
@@ -222,15 +222,15 @@ function love.update(dt)
     end
 end
 function love.draw()
-    p:draw()
-    A:draw()
-    love.graphics.print("Score: ", 10, 10, 0, 1, 1)
+	p:draw()
+	A:draw()
+	love.graphics.print("Score: ", 10, 10, 0, 1, 1)
     love.graphics.print("High Score: ", 150, 10, 0, 1, 1)
     love.graphics.print(hs, 315, 10, 0, 1, 1)
     love.graphics.print("lives: ", 10, 43, 0, 1, 1)
     love.graphics.print(vida, 95, 43, 0, 1, 1)
-    love.graphics.print(score, 100, 10, 0, 1, 1)
-    love.graphics.circle("line", hx, hy, 20, 80)
+	love.graphics.print(score, 100, 10, 0, 1, 1)
+	love.graphics.circle("line", hx, hy, 20, 80)
     love.graphics.setColor(0, 0, 0)
 end
 
