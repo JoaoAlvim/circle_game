@@ -216,8 +216,6 @@ function love.update(dt)
 
         if score > hs then
             hs = score 
-	    file = io.open(test.txt, "a")
-	    file:write(hs, "\n")
         end
         score = 0
         return o.x,o.y,vida,score
