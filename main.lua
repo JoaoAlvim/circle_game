@@ -216,21 +216,23 @@ function love.update(dt)
 
         if score > hs then
             hs = score 
+	    file = io.open(test.txt, "a")
+	    file:write(hs, "\n")
         end
         score = 0
         return o.x,o.y,vida,score
     end
 end
 function love.draw()
-	p:draw()
-	A:draw()
-	love.graphics.print("Score: ", 10, 10, 0, 1, 1)
+    p:draw()
+    A:draw()
+    love.graphics.print("Score: ", 10, 10, 0, 1, 1)
     love.graphics.print("High Score: ", 150, 10, 0, 1, 1)
     love.graphics.print(hs, 315, 10, 0, 1, 1)
     love.graphics.print("lives: ", 10, 43, 0, 1, 1)
     love.graphics.print(vida, 95, 43, 0, 1, 1)
-	love.graphics.print(score, 100, 10, 0, 1, 1)
-	love.graphics.circle("line", hx, hy, 20, 80)
+    love.graphics.print(score, 100, 10, 0, 1, 1)
+    love.graphics.circle("line", hx, hy, 20, 80)
     love.graphics.setColor(0, 0, 0)
 end
 
