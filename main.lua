@@ -126,8 +126,8 @@ function Arma:update(dt)
         if hx > l.x - 20 and hx < l.x + 20 and hy > l.y - 20 and hy < l.y + 20 then
             score = score + 1
 
-            sound = love.audio.newSource("BOING_.WAV")
-            love.audio.play(sound)
+            --sound = love.audio.newSource("BOING_.WAV")
+            --love.audio.play(sound)
 
             --dist = math.sqrt(math.pow((o.y-hy),2)+ math.pow((o.x-hx),2))
 
